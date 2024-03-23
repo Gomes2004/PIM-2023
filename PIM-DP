@@ -1,0 +1,122 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>// necessário p/ as funções rand() e srand()
+#include <time.h>//necessário p/ função time()
+
+// Definindo a struct para seleção de venda de bilhetes
+struct SelecaoBilhetes {
+    float  tipo1, tipo2, tipo3, tipo4;
+
+
+    
+};
+// Estrutura para armazenar informações sobre os bilhetes
+struct Ticket {
+    char nome ;
+    int cpf ; 
+    
+    //int n = rand()%10;
+    
+};
+
+
+int main() {
+    // Criando uma instância da struct
+    struct SelecaoBilhetes selecao;
+    struct Ticket selecao1;
+    
+int  vbilhete;
+float vcpf;
+
+
+printf ("Tabela de valores \n\nR$ 98,90 Valor unitario para cada exposição. \nAo adicionar uma exposição ou mais o valor unitário adicional séra de R$ 50,00;");
+    // Obtendo as seleções do usuário (isso pode ser feito de várias maneiras, por exemplo, usando scanf)
+    printf(" Tabela de preços R$ 98,90 in\n\n\nQuantidade de bilhetes para o tema 100 anos da semana de arte moderna: ");
+    scanf("%f", &selecao.tipo1);
+
+    printf("Quantidade de bilhetes para o tema 150 anos de Santos Dumont : ");
+    scanf("%f", &selecao.tipo2);
+
+    printf("Quantidade de bilhetes para o tema Jogos Olimpicos de Paris 2024: ");
+    scanf("%f", &selecao.tipo3);
+
+    printf("Quantidade de bilhetes para o tema Tema a ser definido: ");
+    scanf("%f", &selecao.tipo4);
+system ("cls");
+//condição caso não seja selecionado nenhum tema
+//if (selecao.tipo1 == 0 && selecao.tipo2 == 0 && selecao.tipo3 == 0 && selecao.tipo4 == 0)
+// {
+// printf ("\n\n\n       ERRO NA COMPRA");
+// exit(0);
+
+// };
+
+float bilhete = (selecao.tipo1 + selecao.tipo2 + selecao.tipo3 + selecao.tipo4 - 1);
+float valorU = 98.90;// valor da primeira unidade
+float valorN = 50.00; // valor para as demais unidades
+float valor = valorN * bilhete + valorU;
+srand (time(NULL));
+int n = rand();
+
+
+
+printf ("Valor total da compra : %.2f", valor);
+printf ("\nCompra realizada com sucesso.");
+    printf ("\nNumero do ingresso : %d\n\n\n\n", n);
+//system ("pause");
+//system ("cls");
+  
+printf ("Por favor insira seu nome:");
+scanf ("%s", &selecao1.nome);
+printf ("Por favor insira seu CPF:");
+scanf ("%d", &selecao1.cpf);
+
+//pause
+//system ("pause");
+
+
+if (selecao.tipo1 >= 1 || selecao.tipo2 >=1 || selecao.tipo3 >=1 || selecao.tipo4 >=1)
+{
+
+printf ("    **INGRESSO** \n\n\n\n");
+printf ("Valor total pago: %.2f\n", valor);
+printf ("\nNome: %s", selecao1.nome);
+printf ("\nCPF: %d", selecao1.cpf);
+printf ("\ntema 100 anos da semana de arte moderna: %.f \n Jogos Olimpicos de Paris 2024: %.f \n150 anos de Santos Dumont: %.f \nTema a definir: %.f", selecao.tipo1, selecao.tipo2, selecao.tipo3, selecao.tipo4);
+printf ("\nNumero do ingresso : %d\n\n\n\n", n);
+
+system ("pause"); 
+system ("cls");
+
+
+printf ("Ola, tudo bem?");
+printf ("\nDigite o numero de ingresso para validacao: ");
+scanf  ("%d", &vbilhete);
+printf ("\nDigite seu CPF para validacao: ");
+scanf  ("%D", &vcpf);
+
+
+system ("pause");
+system ("cls");
+
+if (vcpf == selecao1.cpf && vbilhete == n)
+
+    printf ("\n\n\n\nBILHETE VALIDADO COM SUCESSO!");
+
+
+else 
+if (vcpf == selecao1.cpf  && vbilhete !=n)
+
+
+printf ("\n\n\n\nBILHETE INVALIDO!"); 
+else
+
+if 
+(vcpf != selecao1.cpf && vbilhete == bilhete) 
+
+printf ("\n\n\n\nCPF INVALIDO!");
+
+
+    return 0;
+    
+}}
